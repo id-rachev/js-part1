@@ -1,0 +1,10 @@
+C:\Users\Emilly\Documents\Visual Studio 2012\Projects\JSFunctions\JSFunctions\bin\JSFunctions.dll
+C:\Users\Emilly\Documents\Visual Studio 2012\Projects\JSFunctions\JSFunctions\bin\JSFunctions.pdb
+C:\Users\Emilly\Documents\Visual Studio 2012\Projects\JSFunctions\JSFunctions\obj\Debug\JSFunctions.csprojResolveAssemblyReference.cache
+C:\Users\Emilly\Documents\Visual Studio 2012\Projects\JSFunctions\JSFunctions\obj\Debug\JSFunctions.dll
+C:\Users\Emilly\Documents\Visual Studio 2012\Projects\JSFunctions\JSFunctions\obj\Debug\JSFunctions.pdb
+C:\Users\Emilly\Documents\Visual Studio 2012\Projects\7.JSFunctions\JSFunctions\bin\JSFunctions.dll
+C:\Users\Emilly\Documents\Visual Studio 2012\Projects\7.JSFunctions\JSFunctions\bin\JSFunctions.pdb
+C:\Users\Emilly\Documents\Visual Studio 2012\Projects\7.JSFunctions\JSFunctions\obj\Debug\JSFunctions.csprojResolveAssemblyReference.cache
+C:\Users\Emilly\Documents\Visual Studio 2012\Projects\7.JSFunctions\JSFunctions\obj\Debug\JSFunctions.dll
+C:\Users\Emilly\Documents\Visual Studio 2012\Projects\7.JSFunctions\JSFunctions\obj\Debug\JSFunctions.pdb

@@ -1,0 +1,31 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>LastDigitInWord</title>
+</head>
+<body>
+    <script>
+        //Write a function that returns the last digit of given integer as an English word. Examples: 512  "two", 1024  "four", 12309  "nine"
+        
+        function LastDigitInWord(number) {
+            var digit = parseInt(number % 10);
+
+            switch (digit) {
+                case 1: console.log("One"); break;
+                case 2: console.log("Two"); break;
+                case 3: console.log("Three"); break;
+                case 4: console.log("Four"); break;
+                case 5: console.log("Five"); break;
+                case 6: console.log("Six"); break;
+                case 7: console.log("Seven"); break;
+                case 8: console.log("Eight"); break;
+                case 9: console.log("Nine"); break;
+                case 0: console.log("Zero"); break;
+                default: console.log("Invalid input. Please enter a number"); break;
+            }
+        }
+        var number = 510;
+        LastDigitInWord(number);
+    </script>
+</body>
+</html>

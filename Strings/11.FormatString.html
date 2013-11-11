@@ -1,0 +1,33 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Format String</title>
+    <link href="styles/js-console.css" rel="stylesheet" />
+</head>
+<body>
+    <div id="js-console"></div>
+    <script src="scripts/js-console.js"></script>
+    <script>
+        // Write a function that formats a string using placeholders.
+
+        function stringFormat() {
+            var textFormat = arguments[0];
+            for (var i = 0; i < arguments.length - 1; i++) {
+                var regex = new RegExp('\\{' + (i) + '\\}');
+                textFormat = textFormat.replace(regex, arguments[i + 1]);
+            }
+            return textFormat;
+        }
+
+        var myTemplateText = "Full name: {0} {1}, age: {2}, profession: {3}.";
+        var myFirstName = "Georgi";
+        var myLastName = "Georgiev";
+        var myAge = 26;
+        var myProfession = "designer";
+
+        jsConsole.writeLine(
+            stringFormat(myTemplateText, myFirstName, myLastName, myAge, myProfession));
+
+    </script>
+</body>
+</html>

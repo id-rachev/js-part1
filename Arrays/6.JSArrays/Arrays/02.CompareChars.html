@@ -1,0 +1,38 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>CompareChars</title>
+</head>
+<body>
+    <script>
+        //Write a script that compares two char arrays lexicographically (letter by letter).
+        var first = ["a", "b", "c"];
+        var second = ["a", "b", "c"];
+        var smaller = Math.min(first.length, second.length);
+        //debugger;
+        
+        for (var i = 0; i < smaller; i++) {
+            if (first[i] == second[i]) {
+                continue;
+            }
+        
+            else if (first[i] > second[i]) {
+                console.log("First is bigger.");
+                break;
+            } else {
+                console.log("Second is bigger.");
+                break;
+            }
+        }
+
+        if (first.length==second.length) {
+            console.log("Equals");
+        } else if (first.length>second.length) {
+            console.log("First is bigger.");
+        } else {
+            console.log("Second is bigger.");
+        }
+
+    </script>
+</body>
+</html>

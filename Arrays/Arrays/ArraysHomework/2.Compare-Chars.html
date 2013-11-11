@@ -1,0 +1,48 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Compare Chars</title>
+    <link href="styles/js-console.css" rel="stylesheet" />
+</head>
+<body>
+    <div id="js-console"></div>
+    <script src="scripts/js-console.js"></script>
+    <script>
+        //Write a script that compares two char arrays lexicographically (letter by letter).
+        var first = ["a", "z", "c"];
+        var second = ["a", "b", "c"];
+        var smaller = Math.min(first.length, second.length);
+        var isEqual = false;
+
+        for (var i = 0; i < smaller; i++) {
+            if (first[i] == second[i]) {
+                isEqual = true;
+                continue;
+            }
+
+            else if (first[i] > second[i]) {
+                jsConsole.writeLine("First is bigger.");
+                isEqual = false;
+                break;
+            } else {
+                jsConsole.writeLine("Second is bigger.");
+                isEqual = false;
+                break;
+            }
+        }
+
+        
+        if ((first.length == second.length) && isEqual ) {
+            jsConsole.writeLine("Equals.");
+        }
+        if (first.length == second.length) {
+            jsConsole.writeLine("Equals by length.");
+        } else if (first.length > second.length) {
+            jsConsole.writeLine("First is bigger.");
+        } else {
+            jsConsole.writeLine("Second is bigger.");
+        }
+
+    </script>
+</body>
+</html>

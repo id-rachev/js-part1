@@ -1,0 +1,82 @@
+<html>
+<head>
+    <title>Numbers To Text</title>
+    <link href="styles/js-console.css" rel="stylesheet" />
+    <!--Write a script that converts a number in the range [0...999]
+        to a text corresponding to its English pronunciation. -->
+</head>
+<body>
+    <div id="js-console"></div>
+    <script src="scripts/js-console.js"></script>
+    <script>
+        var number = 712;
+        var strNum = number.toString();
+
+        var textNumTo20 = 
+            [ "zero", "one", "two", "three", "four", "five",
+                "six", "seven", "eight", "nine", "ten", "eleven",
+                "twelve", "thirteen", "fourteen", "fifteen", "sixteen",
+                "seventeen", "eighteen", "nineteen", "twenty" ];
+
+        var textNumTens = 
+            [ "ten", "twenty", "thirty", "forty", "fifty", "sixty",
+                "seventy", "eighty", "ninety", "hundred" ];
+
+        if (number <= 20)
+        {
+            jsConsole.writeLine(textNumTo20[number]);
+        }
+
+        else if (number < 100)
+        {
+            var tens = parseInt(strNum[0]);
+            var digits = parseInt(strNum[1]);
+
+            if (digits != 0)
+            {
+                jsConsole.writeLine(textNumTens[tens - 1] + " " + textNumTo20[digits]);
+            }
+            else //(digits == 0)
+            {
+                jsConsole.writeLine(textNumTens[tens - 1]);
+            }
+        }
+
+        else if ((number >= 100) && (number < 1000))
+        {
+            var hundreds = parseInt(strNum[0]);
+            var tens = parseInt(strNum[1]);
+            var digits = parseInt(strNum[2]);
+
+            if ((tens < 2) && (digits != 0))
+            {
+                jsConsole.writeLine(
+                    textNumTo20[hundreds] + " " + textNumTens[9] +
+                    " and " + textNumTo20[(tens * 10) + digits]);
+
+            }
+            else if ((tens != 0) && (digits == 0))
+            {
+                jsConsole.writeLine(
+                    textNumTo20[hundreds] + " " + textNumTens[9] +
+                    " and " + textNumTens[tens - 1]);
+            }
+            else if ((tens >= 2) && (digits != 0))
+            {
+                jsConsole.writeLine(
+                    textNumTo20[hundreds] + " " + textNumTens[9] +
+                    " " + textNumTens[tens - 1] + " " + textNumTo20[digits]);
+            }
+            else //((tens == 0) && (digits == 0))
+            {
+                jsConsole.writeLine(textNumTo20[hundreds] + " " + textNumTens[9]);
+            }
+        }
+
+        else
+        {
+            jsConsole.writeLine("Error! Invalid number range!");
+        }
+    </script>
+</body>
+</html>

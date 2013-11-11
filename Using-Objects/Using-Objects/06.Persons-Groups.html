@@ -1,0 +1,107 @@
+<html>
+<head>
+    <title>Persons Groups</title>
+    <link href="styles/js-console.css" rel="stylesheet" />
+    <!--Write a function that groups an array of persons by age,
+        first or last name. The function must return an associative
+        array, with keys - the groups, and values - arrays with
+        persons in this groups.-->
+</head>
+<body>
+    <div id="js-console"></div>
+    <script src="scripts/js-console.js"></script>
+    <script>
+
+        function buildPerson(firstName, lastName, age) {
+            return {
+                firstName: firstName,
+                lastName: lastName,
+                age: age,
+                toString: function getFullInfo() {
+                    return this.firstName + " " + this.lastName +
+                        ", " + this.age + " years old.";
+                }
+            };
+        }
+
+        function groupPersonsByProps(persons, property) {
+
+            var groupedPersonsArr = {
+                byFirstName: {},
+                byLastName: {},
+                byAge: {}
+            };
+            switch (property) {
+                case "firstName": {
+                    var peopleFname = {};
+                    var fName = "";
+                    var peopleF = {};
+                    for (var i = 0; i < persons.length; i++) {
+                        for (var j = i; j < persons.length; j++) {
+
+                            if (persons[i].firstName == persons[j].firstName) {
+                                peopleFname.fName = persons[i].firstName;
+                                peopleFname.peopleF += persons[i];
+                            }
+                        }
+                    }
+                    groupedPersonsArr.byFirstName = peopleFname;
+                    break;
+                }
+                case "lastName": {
+                    var peopleLname = {};
+                    var lName = "";
+                    var peopleL = {};
+                    for (var i = 0; i < persons.length; i++) {
+                        for (var j = i; j < persons.length; j++) {
+
+                            if (persons[i].lastName == persons[j].lastName) {
+                                peopleLname.lName = persons[i].lastName;
+                                peopleLname.peopleL += persons[i];
+                            }
+                        }
+                    }
+                    groupedPersonsArr.byLastName = peopleLname;
+                    break;
+                }
+                case "age": {
+                    var peopleAge = {};
+                    var age = "";
+                    var peopleA = {};
+                    for (var i = 0; i < persons.length; i++) {
+                        for (var j = i; j < persons.length; j++) {
+
+                            if (persons[i].age == persons[j].age) {
+                                peopleAge.fName = persons[i].age;
+                                peopleAge.peopleA += persons[i];
+                            }
+                        }
+                    }
+                    groupedPersonsArr.byAge = peopleAge;
+                    break;
+                }
+                default:
+                    throw new Error("Invalid property!");
+            }
+
+            return groupedPersonsArr;
+        }
+
+        var persons = [
+            buildPerson("Georgi", "Spasov", 21),
+            buildPerson("Marina", "Nikolova", 20),
+            buildPerson("Petar", "Mechkov", 33),
+            buildPerson("Petar", "Spasov", 20),
+            buildPerson("Marina", "Pesheva", 21),
+            buildPerson("Georgi", "Mechkov", 33)
+        ];
+
+        var groupedByFirstName = groupPersonsByProps(persons, "firstName");
+        
+        var groupedByLastName = groupPersonsByProps(persons, "lastName");
+        
+        var groupedByAge = groupPersonsByProps(persons, "age");
+
+    </script>
+</body>
+</html>

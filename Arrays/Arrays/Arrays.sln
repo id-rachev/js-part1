@@ -1,0 +1,35 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "ArraysHomework", "ArraysHomework\", "{27E01705-54B6-476D-A03E-6F4107EE3FC5}"
+	ProjectSection(WebsiteProperties) = preProject
+		TargetFrameworkMoniker = ".NETFramework,Version%3Dv4.5"
+		Debug.AspNetCompiler.VirtualPath = "/ArraysHomework"
+		Debug.AspNetCompiler.PhysicalPath = "ArraysHomework\"
+		Debug.AspNetCompiler.TargetPath = "PrecompiledWeb\ArraysHomework\"
+		Debug.AspNetCompiler.Updateable = "true"
+		Debug.AspNetCompiler.ForceOverwrite = "true"
+		Debug.AspNetCompiler.FixedNames = "false"
+		Debug.AspNetCompiler.Debug = "True"
+		Release.AspNetCompiler.VirtualPath = "/ArraysHomework"
+		Release.AspNetCompiler.PhysicalPath = "ArraysHomework\"
+		Release.AspNetCompiler.TargetPath = "PrecompiledWeb\ArraysHomework\"
+		Release.AspNetCompiler.Updateable = "true"
+		Release.AspNetCompiler.ForceOverwrite = "true"
+		Release.AspNetCompiler.FixedNames = "false"
+		Release.AspNetCompiler.Debug = "False"
+		VWDPort = "50332"
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{27E01705-54B6-476D-A03E-6F4107EE3FC5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{27E01705-54B6-476D-A03E-6F4107EE3FC5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

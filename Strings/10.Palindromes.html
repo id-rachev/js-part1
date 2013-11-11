@@ -1,0 +1,49 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Palindromes</title>
+    <link href="styles/js-console.css" rel="stylesheet" />
+</head>
+<body>
+    <div id="js-console"></div>
+    <script src="scripts/js-console.js"></script>
+    <script>
+        // Write a program that extracts from a given text all palindromes,
+        // e.g. "ABBA", "lamal", "exe".
+
+        var myText = 'My mom listens ABBA. My dad have one dark eye and one bright.';
+
+        jsConsole.writeLine(myText);
+
+        function getPalindromes(myText) {
+            myText = myText.replace(/\./g, '');
+            var splitted = myText.split(' ');
+            var palindromes = [];
+
+            var lengthSpl = splitted.length;
+            for (var i = 0; i < lengthSpl; i++) {
+                var word = splitted[i];
+                var wordHalfLength = parseInt(word.length / 2);
+
+                for (var j = 0, k = word.length - 1; j <= wordHalfLength ; j++, k--) {
+
+                    if (word[j] != word[k]) {
+                        break;
+                    }
+                    else if ((j == k) || (j == k - 1)) {
+                        palindromes.push(word);
+                    }
+                }
+            }
+            return palindromes;
+        }
+
+        var palindromes = getPalindromes(myText);
+
+        for (var pal in palindromes) {
+
+            jsConsole.writeLine(palindromes[pal]);
+        }
+    </script>
+</body>
+</html>

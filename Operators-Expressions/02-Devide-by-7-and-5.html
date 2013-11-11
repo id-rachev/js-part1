@@ -1,0 +1,25 @@
+<html>
+<head>
+	<title>Devide by 7 and 5</title>
+	<link href="styles/js-console.css" rel="stylesheet" />
+<!--    Write a boolean expression that checks for given integer if
+    it can be divided (without remainder) by 7 and 5 in the same time.-->
+</head>
+<body>
+	<div id="js-console"></div>
+	<script src="scripts/js-console.js"></script>
+	<script>
+	    var givenNumber = 140;
+
+	    if ((givenNumber % 7 == 0) && (givenNumber % 5 == 0)) {
+
+	        jsConsole.writeLine("Number " + givenNumber +
+                " can be divided (without remainder) by 7 and 5!");
+	    }
+	    else {
+	        jsConsole.writeLine("Number " + givenNumber +
+                " can not be divided (without remainder) by 7 and 5!");
+	    }
+	</script>
+</body>
+</html>

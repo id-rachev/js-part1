@@ -1,0 +1,32 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Replace Tags</title>
+    <link href="styles/js-console.css" rel="stylesheet" />
+</head>
+<body>
+    <div id="js-console"></div>
+    <script src="scripts/js-console.js"></script>
+    <script>
+        // Write a JavaScript function that replaces in a HTML document given as string
+        // all the tags <a href="…">…</a> with corresponding tags [URL=…]…/URL]. 
+
+        var paragraph = '<p>Please visit <a href="http://academy.telerik.com">our site</a> to choose ' +
+        'a training course. Also visit <a href="www.devbg.org">our forum</a> to discuss the courses.</p>';
+
+        jsConsole.writeLine(paragraph);
+
+        function replaceTags() {
+            var replacedPar = '';
+            replacedPar = paragraph.replace(/<a href="/g, '[URL=');
+            replacedPar = replacedPar.replace(/">/g, ']');
+            replacedPar = replacedPar.replace(/<\/a>/g, '[/URL]');
+
+            return replacedPar;
+        }
+        
+        jsConsole.writeLine(replaceTags(paragraph));
+
+    </script>
+</body>
+</html>

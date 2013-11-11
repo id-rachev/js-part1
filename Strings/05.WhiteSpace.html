@@ -1,0 +1,29 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>White Space</title>
+    <link href="styles/js-console.css" rel="stylesheet" />
+</head>
+<body>
+    <div id="js-console"></div>
+    <script src="scripts/js-console.js"></script>
+    <script>
+        // Write a function that replaces non breaking white-spaces in a text with &nbsp;
+
+        var testStr = 'Some text here for test!';
+
+        function replaceWithNBSP(str) {
+            var myArr = str.split(' ');
+            var exitStr = myArr.join('&nbsp;');//OR '&amp;nbsp;'
+            return exitStr;
+        }
+
+        //jsConsole.writeLine(testStr);
+        console.log(testStr);
+        //jsConsole.writeLine(replaceWithNBSP(testStr));
+        jsConsole.writeLine('Check the console!')
+        console.log(replaceWithNBSP(testStr));
+
+    </script>
+</body>
+</html>

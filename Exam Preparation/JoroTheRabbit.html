@@ -1,0 +1,65 @@
+<html>
+<head>
+    <title>Joro The Rabbit</title>
+    <!--    <link href="styles/js-console.css" rel="stylesheet" />-->
+</head>
+<script>
+    function Solve(args) {
+
+        var positions = args[0].split(", ");
+
+        for (var i = 0; i < positions.length; i++) {
+            positions[i] = parseInt(positions[i]);
+        }
+
+        var maxJumpsCount = 0;
+
+        for (var startPosition = 0; startPosition < positions.length; startPosition++) {
+            for (var stepLength = 1; stepLength <= positions.length ; stepLength++) {
+
+                var currentPosition = startPosition;
+
+                var visited = {};
+                var jumpsCount = 0;
+
+                while (!visited[currentPosition]) {
+                    visited[currentPosition] = true;
+
+                    jumpsCount++;
+
+                    var lastPosition = currentPosition + stepLength;
+
+                    currentPosition = currentPosition + stepLength;
+
+                    if (currentPosition >= positions.length) {
+                        currentPosition = currentPosition - positions.length;
+                    }
+
+                    if (positions[currentPosition] <= positions[lastPosition]) {
+                        break;
+                    }
+                }
+
+                if (jumpsCount > maxJumpsCount) {
+                    maxJumpsCount = jumpsCount;
+                }
+            }
+        }
+
+        return maxJumpsCount;
+    }
+
+    function SendInputToSolve(args) {
+        var args = [];
+
+        args[0] = "1, -2, -3, 4, -5, 6, -7, -8";
+
+        console.log(Solve(args));
+    }
+</script>
+<body onload="SendInputToSolve()">
+    <!--    <div id="js-console"></div>
+    <script src="scripts/js-console.js"></script>-->
+
+</body>
+</html>

@@ -1,0 +1,45 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>WordOccurrence</title>
+</head>
+<body>
+    <script>
+
+
+        ////Write a function that finds all the occurrences of word in a text
+        var text = "If you haven't found it yet, keep looking. Don't settle. As with all matters of the heart, you'll know when you find it. And, like any great relationship, it just gets better and better as the years roll on.";
+        var search = "you";
+        var words = {};
+
+        function findWordOccurences(text, search) {
+            var searchToLower = search.toLowerCase();
+            var currentWord = "";
+            var separators = [" ", "-", ".", ",","'"];
+
+            for (var i = 0; i < text.length; i++) {
+                if (separators.indexOf(text[i]) >= 0) {
+                    var wordToLower = currentWord.toLowerCase();
+
+                    if (words.hasOwnProperty(wordToLower)) {
+                        words[wordToLower]++;
+                    } else {
+                        words[wordToLower] = 1;
+                    }
+                    currentWord = '';
+                } else {
+                    currentWord += text[i];
+                }
+            }
+
+            if (words.hasOwnProperty(searchToLower)) {
+                console.log(words[searchToLower]);
+            } else {
+                console.log(0);
+            }
+        }
+
+        findWordOccurences(text, search);
+    </script>
+</body>
+</html>

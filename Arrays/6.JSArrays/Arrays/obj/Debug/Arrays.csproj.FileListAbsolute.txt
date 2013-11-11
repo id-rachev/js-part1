@@ -1,0 +1,5 @@
+C:\Users\Emilly\Documents\Visual Studio 2012\Projects\6.JSArrays\Arrays\bin\Arrays.dll
+C:\Users\Emilly\Documents\Visual Studio 2012\Projects\6.JSArrays\Arrays\bin\Arrays.pdb
+C:\Users\Emilly\Documents\Visual Studio 2012\Projects\6.JSArrays\Arrays\obj\Debug\Arrays.csprojResolveAssemblyReference.cache
+C:\Users\Emilly\Documents\Visual Studio 2012\Projects\6.JSArrays\Arrays\obj\Debug\Arrays.dll
+C:\Users\Emilly\Documents\Visual Studio 2012\Projects\6.JSArrays\Arrays\obj\Debug\Arrays.pdb

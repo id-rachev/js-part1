@@ -1,0 +1,20 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>CountDivs</title>
+</head>
+<body>
+    <div>Div1</div>
+    <div>Div2</div>
+    <script>
+        //Write a function to count the number of divs on the web page
+
+        countDivs();
+
+        function countDivs() {
+            var count = document.getElementsByTagName("div").length;
+            console.log("The number of divs is " + count);
+        }
+    </script>
+</body>
+</html>

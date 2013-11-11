@@ -1,0 +1,42 @@
+<html>
+<head>
+	<title>Biggest Of Three</title>
+	<link href="styles/js-console.css" rel="stylesheet" />
+    <!--Write a script that finds the biggest of three
+        integers using nested if statements.-->
+</head>
+<body>
+	<div id="js-console"></div>
+	<script src="scripts/js-console.js"></script>
+	<script>
+	    var numA = 3,
+            numB = 2,
+            numC = 5;
+
+	    if ((numA > numB) || (numA > numC)) {
+	        if ((numA > numB) && (numA > numC)) {
+	            jsConsole.writeLine("The biggest number is: " + numA);
+	        }
+	        else if (numA <= numB) {
+	            jsConsole.writeLine("The biggest number is: " + numB);
+	        }                                                 
+	        else {                                            
+	            jsConsole.writeLine("The biggest number is: " + numC);
+	        }                                                 
+	    }                                                     
+                                                              
+	    else if ((numB > numA) || (numB > numC)) {            
+	        if ((numB > numA) && (numB > numC)) {             
+	            jsConsole.writeLine("The biggest number is: " + numB);
+	        }                                                 
+	        else {                                            
+	            jsConsole.writeLine("The biggest number is: " + numC);
+	        }
+	    }
+
+	    else {
+	        jsConsole.writeLine("The biggest number is: " + numC);
+	    }
+	</script>
+</body>
+</html>

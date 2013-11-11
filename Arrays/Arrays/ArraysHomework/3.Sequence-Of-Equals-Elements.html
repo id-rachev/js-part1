@@ -1,0 +1,35 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Sequence Of Equals Elements</title>
+    <link href="styles/js-console.css" rel="stylesheet" />
+</head>
+<body>
+    <div id="js-console"></div>
+    <script src="scripts/js-console.js"></script>
+    <script>
+        //Write a script that finds the maximal sequence of equal elements in an array.
+        var arr = [2, 1, 1, 2, 3, 3, 2, 2, 2, 1];
+
+        var start = 0;
+        var len = 1;
+        var bestStart = 0;
+        var bestLen = 0;
+        for (var i = 0; i < arr.length - 1; i++) {
+            if (arr[i] == arr[i + 1]) {
+                start = arr[i];
+                len++;
+                if (len > bestLen) {
+                    bestLen = len;
+                    bestStart = start;
+                }
+            }
+            else {
+                len = 1;
+            }
+        }
+        jsConsole.writeLine("Maximal sequence of: " +
+            bestLen + " (" + bestStart + " times)");
+    </script>
+</body>
+</html>

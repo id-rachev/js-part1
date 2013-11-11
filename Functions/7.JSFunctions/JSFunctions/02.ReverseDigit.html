@@ -1,0 +1,24 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>ReverseDigit</title>
+</head>
+<body>
+    <script>
+        //Write a function that reverses the digits of given decimal number. Example: 256  652
+        var number = 46831;
+
+        function reverseNumber(number) {
+            var digits = [];
+            while (number != 0) {
+                var lastDigit = number % 10;
+                number = parseInt(number / 10);
+                digits.push(lastDigit);
+            }
+            console.log(digits.join(""));
+        }
+        console.log(number);
+        reverseNumber(number);
+    </script>
+</body>
+</html>

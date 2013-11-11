@@ -1,0 +1,43 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Extract Page Content</title>
+    <link href="styles/js-console.css" rel="stylesheet" />
+</head>
+<body>
+    <div id="js-console"></div>
+    <script src="scripts/js-console.js"></script>
+    <script>
+        // Write a function that extracts the content of a html page given as text. 
+        // The function should return anything that is in a tag, without the tags. 
+
+        var testStr = '<html><head><title>Sample site</title></head><body><div>text<div>more text</div>and more...</div>in body</body></html>';
+        jsConsole.writeLine(testStr);
+        console.log(testStr);
+
+        function extractTextFromHTML(html) {
+            var result = new Array();
+            var startIndex = 0;
+            var endIndex = 0;
+            var tempStr;
+            while (true) {
+
+                startIndex = (html.indexOf('>', endIndex)) + 1;
+                endIndex = html.indexOf('<', startIndex);
+                tempStr = html.substring(startIndex, endIndex);
+                if (endIndex >= 0) {
+                    result.push(tempStr);
+                }
+                else {
+                    break;
+                }
+            }
+            var res = result.join('');
+            return res;
+        }
+        jsConsole.writeLine(extractTextFromHTML(testStr));
+        console.log(extractTextFromHTML(testStr));
+
+    </script>
+</body>
+</html>

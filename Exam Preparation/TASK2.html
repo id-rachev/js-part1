@@ -1,0 +1,102 @@
+<html>
+<head>
+    <title>Exam</title>
+    <!--    <link href="styles/js-console.css" rel="stylesheet" />-->
+</head>
+<script>
+    function Solve(args) {
+
+        var inputRow1 = args[0].split(" ");
+
+        inputRow1[0] = parseInt(inputRow1[0]);
+        inputRow1[1] = parseInt(inputRow1[1]);
+        inputRow1[2] = parseInt(inputRow1[2]);
+        var rowsN = inputRow1[0];
+        var colsM = inputRow1[1];
+
+        var field = {};
+        var numbers = 0;
+        for (var row = 0; row < rowsN; row++) {
+            for (var col = 0; col < colsM; col++) {
+                numbers++;
+                field[numbers] = [row, col];
+            }
+        }
+        //console.log(field);
+        //for (var num in field) {
+        //    console.log(typeof(num));
+        //}
+        //console.log(field["1"]);
+
+
+        var startPosition = [parseInt(args[1][0]), parseInt(args[1][2])];
+        var currentPosition = startPosition;
+
+        var jumps = [];
+        var numOfJumps = inputRow1[2];
+        for (var i = 2; i < numOfJumps + 2; i++) {
+
+            var currentJump = args[i].split(" ");
+            currentJump[0] = parseInt(currentJump[0]);
+            currentJump[1] = parseInt(currentJump[1]);
+
+            jumps[i - 2] = currentJump;
+        }
+
+
+        var sumNumbers = 0;
+        var isVisited = {};
+        var numJumps = 0;
+        var visitedNum = [];
+        //var xPos = currentPosition[0];
+        //var yPos = currentPosition[1];
+        while (((currentPosition[0] >= 0) && (currentPosition[1] >= 0)) &&
+            ((currentPosition[0] <= rowsN - 1) && (currentPosition[1] <= colsM - 1))) {
+
+            for (var currentJump = 0; currentJump < jumps.length; currentJump++) {
+
+                for (var num in field) {
+                    if ((field[num][0] == currentPosition[0]) &&
+                        (field[num][1] == currentPosition[1])) {
+                        sumNumbers += parseInt(num);
+                        isVisited[num] = true;
+                        visitedNum.push(num);
+                    }
+                }
+                currentPosition = [(currentPosition[0] + jumps[currentJump][0]),
+                (currentPosition[1] + jumps[currentJump][1])];
+
+                numJumps++;
+
+                console.log(currentPosition);
+                console.log(isVisited);
+                for (var num in isVisited) {
+                    if (isVisited[visitedNum] == true) {
+                        isCaught = true;
+                        return 'caught ' + numJumps;
+                    }
+                }
+            }
+        }
+
+        return 'escaped ' + sumNumbers;
+    }
+
+    function SendInputToSolve(args) {
+        var args = [];
+
+        args[0] = "6 7 3";
+        args[1] = "0 0";
+        args[2] = "2 2";
+        args[3] = "-2 2";
+        args[4] = "2 -2";
+
+        console.log(Solve(args));
+    }
+</script>
+<body onload="SendInputToSolve()">
+    <!--    <div id="js-console"></div>
+    <script src="scripts/js-console.js"></script>-->
+
+</body>
+</html>

@@ -1,0 +1,19 @@
+﻿<html>
+<head>
+    <title>Is Point Within Circle</title>
+    <link href="styles/js-console.css" rel="stylesheet" />
+    <!--  Write an expression that checks if given print (x,  y) (point?) is within a circle K(O, 5). -->
+</head>
+<body>
+    <div id="js-console"></div>
+    <script src="scripts/js-console.js"></script>
+    <script>
+        var coordX = 4,
+            coordY = 2;
+        var radiusP = Math.sqrt((coordX * coordX) + (coordY * coordY));
+        var withinK = radiusP <= 5;
+
+        jsConsole.writeLine("The point is within the circle is: " + withinK);
+    </script>
+</body>
+</html>

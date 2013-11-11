@@ -1,0 +1,5 @@
+C:\Users\Emilly\Documents\Visual Studio 2012\Projects\5.JSLoops\Loops\obj\Debug\Loops.csprojResolveAssemblyReference.cache
+C:\Users\Emilly\Documents\Visual Studio 2012\Projects\5.JSLoops\Loops\bin\i90op99999.dll
+C:\Users\Emilly\Documents\Visual Studio 2012\Projects\5.JSLoops\Loops\bin\i90op99999.pdb
+C:\Users\Emilly\Documents\Visual Studio 2012\Projects\5.JSLoops\Loops\obj\Debug\i90op99999.dll
+C:\Users\Emilly\Documents\Visual Studio 2012\Projects\5.JSLoops\Loops\obj\Debug\i90op99999.pdb

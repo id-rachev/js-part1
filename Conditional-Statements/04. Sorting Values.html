@@ -1,0 +1,45 @@
+<html>
+<head>
+    <title>Sorting Values</title>
+    <link href="styles/js-console.css" rel="stylesheet" />
+    <!--Sort 3 real values in descending order using nested if statements.-->
+</head>
+<body>
+    <div id="js-console"></div>
+    <script src="scripts/js-console.js"></script>
+    <script>
+        var numA = 3,
+            numB = 2,
+            numC = 5;
+
+        if ((numA >= numB) && (numA >= numC)) {
+            if (numB > numC) {
+                jsConsole.writeLine(numA + ", " + numB + ", " + numC);
+            }
+            else {
+                jsConsole.writeLine(numA + ", " + numC + ", " + numB);
+            }
+        }
+
+        else if ((numB >= numA) && (numB >= numC)) {
+            if (numA > numC) {
+                jsConsole.writeLine(numB + ", " + numA + ", " + numC);
+            }
+            else {
+                jsConsole.writeLine(numB + ", " + numC + ", " + numA);
+            }
+        }
+
+        else //((numC >= numA) && (numC >= numB))
+        {
+            if (numA > numB) {
+                jsConsole.writeLine(numC + ", " + numA + ", " + numB);
+            }
+            else {
+                jsConsole.writeLine(numC + ", " + numB + ", " + numA);
+            }
+        }
+
+    </script>
+</body>
+</html>

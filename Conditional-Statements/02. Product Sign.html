@@ -1,0 +1,48 @@
+<html>
+<head>
+	<title>Product Sign</title>
+	<link href="styles/js-console.css" rel="stylesheet" />
+    <!--Write a script that shows the sign (+ or -) of the product
+        of three real numbers without calculating it.
+        Use a sequence of if statements.-->
+</head>
+<body>
+	<div id="js-console"></div>
+	<script src="scripts/js-console.js"></script>
+	<script>
+	    var numA = 3,
+            numB = -2.6,
+            numC = -5.1;
+
+	    if (((numA > 0) && (numB > 0)) || ((numA > 0) && (numC > 0))) {
+	        if ((numC < 0) || (numB < 0)) {
+	            jsConsole.writeLine("The product sign is: '-'");
+	        }
+	        else {
+	            jsConsole.writeLine("The product sign is: '+'");
+	        }
+	    }
+
+	    else if (((numA < 0) && (numB < 0)) || ((numA < 0) && (numC < 0))) {
+	        if ((numC > 0) || (numB > 0)) {
+	            jsConsole.writeLine("The product sign is: '+'");
+	        }
+	        else {
+	            jsConsole.writeLine("The product sign is: '-'");
+	        }
+	    }
+
+	    else if ((numB < 0) && (numC < 0)) {
+	        jsConsole.writeLine("The product sign is: '+'");
+	    }
+
+	    else if ((numB > 0) && (numC > 0)) {
+	        jsConsole.writeLine("The product sign is: '-'");
+	    }
+
+	    else {
+	        jsConsole.writeLine("The product is = 0");
+	    }
+	</script>
+</body>
+</html>

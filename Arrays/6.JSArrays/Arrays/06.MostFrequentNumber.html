@@ -1,0 +1,36 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>MostFrequentNumber</title>
+</head>
+<body>
+    <script>
+        //Write a program that finds the most frequent number in an array.
+        var arr = [3, 5, 6, 7, 6, 6, 3, 8, 8, 7, 8, 9, 8, 2, 8, 8];
+
+        var findedNumber = 0;
+        var equalsCounter = 0;
+        var equalNumbers = 1;
+
+        var sortedArr = arr.sort();
+
+        
+        for (var index = 0; index < sortedArr.length - 1; index++) {
+
+            if (sortedArr[index] == sortedArr[index + 1]) {
+                equalNumbers++;
+
+                if (equalNumbers > equalsCounter) {
+                    equalsCounter = equalNumbers;
+                    findedNumber = sortedArr[index];
+                }
+            }
+            else {
+                equalNumbers = 1;
+            }
+        }
+        console.log("The most frequent number is: "
+               + findedNumber + " , with frequent times: " + equalsCounter);
+    </script>
+</body>
+</html>

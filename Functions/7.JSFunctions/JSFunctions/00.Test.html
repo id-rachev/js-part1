@@ -1,0 +1,33 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>TEst</title>
+</head>
+<body>
+    <script>
+        printTriangle(5);
+
+        function printTriangle(n) {
+
+            for (var i = 1; i <= n; i++) {
+                //printi vseki red
+                var row = [];
+                for (var j = 1; j <= i; j++) {
+                    row.push(j);
+                }
+                console.log(row.join(" "));
+            }
+
+            for (var i = n - 1; i >= 1; i--) {
+                row = [];
+                for (var j = 1; j <= i; j++) {
+                    row.push(j);
+                }
+                console.log(row.join(" "));
+            }
+        }
+
+        
+    </script>
+</body>
+</html>

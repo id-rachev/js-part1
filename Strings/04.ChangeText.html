@@ -1,0 +1,52 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Change Text</title>
+    <link href="styles/js-console.css" rel="stylesheet" />
+</head>
+<body>
+    <div id="js-console"></div>
+    <script src="scripts/js-console.js"></script>
+    <script>
+        // You are given a text. Write a function that changes the text in all regions:
+        // <upcase>text</upcase> to uppercase.
+        // <lowcase>text</lowcase> to lowercase
+        // <mixcase>text</mixcase> to mix casing(random)
+
+        var myText = " We are <upcase>living</upcase> in a <upcase>yellow submarine</upcase>. We <upcase>don't</upcase> have <upcase>anything</upcase> else. "
+        jsConsole.writeLine(myText);
+        console.log(myText);
+
+
+        function executeTagsInText(text) {
+
+            var StringNew = "";
+            var indexStart = 0;
+            var indexStop = 0;
+            var Upp;
+            var result;
+            for (var i = 0; i < text.length - 8; i++) {
+
+                if (text.substr(i, 8) == "<upcase>") {
+                    indexStart = i + 8;
+                    i = indexStart;
+                }
+                if (text.substr(i, 9) == "</upcase>") {
+                    indexStop = i;
+                    var lenght = indexStop - indexStart;
+                    Upp = text.substr(indexStart, lenght).toUpperCase();
+                    text = text.replace(text.substr(indexStart, lenght), Upp);
+                }
+            }
+            text = text.replace("<upcase>", "");
+            text = text.replace("</upcase>", "");
+            return text;
+        }
+        var result = executeTagsInText(myText);
+        jsConsole.writeLine(result);
+        console.log(result);
+
+
+    </script>
+</body>
+</html>

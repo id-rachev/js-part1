@@ -1,0 +1,25 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+</head>
+<body>
+    <script>
+        //Write a function that checks if the element at given position in given array of integers is bigger than its two neighbors (when such exist).
+        var arr = [2, 3, 8, 1, 5];
+        
+        function checkIfExist(arr) {
+            for (var i = 1; i < arr.length - 1; i++) {
+                if (arr[i] > arr[i - 1] && arr[i] > arr[i + 1]) {
+                   
+                    return true; //return arr[i];
+                }
+            }
+            return false;
+        }
+        
+        console.log(checkIfExist(arr));
+
+    </script>
+</body>
+</html>

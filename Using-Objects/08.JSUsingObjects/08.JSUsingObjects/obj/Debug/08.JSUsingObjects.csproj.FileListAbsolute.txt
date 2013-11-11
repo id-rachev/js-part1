@@ -1,0 +1,5 @@
+C:\Users\Emilly\Documents\Visual Studio 2012\Projects\08.JSUsingObjects\08.JSUsingObjects\bin\08.JSUsingObjects.dll
+C:\Users\Emilly\Documents\Visual Studio 2012\Projects\08.JSUsingObjects\08.JSUsingObjects\bin\08.JSUsingObjects.pdb
+C:\Users\Emilly\Documents\Visual Studio 2012\Projects\08.JSUsingObjects\08.JSUsingObjects\obj\Debug\08.JSUsingObjects.csprojResolveAssemblyReference.cache
+C:\Users\Emilly\Documents\Visual Studio 2012\Projects\08.JSUsingObjects\08.JSUsingObjects\obj\Debug\08.JSUsingObjects.dll
+C:\Users\Emilly\Documents\Visual Studio 2012\Projects\08.JSUsingObjects\08.JSUsingObjects\obj\Debug\08.JSUsingObjects.pdb

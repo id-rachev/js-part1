@@ -1,0 +1,39 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>ContainsProperty</title>
+    <link href="styles/js-console.css" rel="stylesheet" />
+</head>
+<body>
+    <div id="js-console"></div>
+    <script src="scripts/js-console.js"></script>
+    <script>
+        //Write a function that checks if a given object contains a given property
+        
+        var obj = {
+            name: "Roni",
+            length: "1"
+           
+        };
+       
+        function hasProperty(object, property) {
+            var hasProperty = false;
+            for (var i in object) {
+               
+                if (property == i) {
+                    hasProperty = true;
+                }
+              
+            }
+            if (hasProperty) {
+                jsConsole.writeLine("Found property: " + property)
+            }
+            else {
+                jsConsole.writeLine("Not found.")
+            }
+        };
+       
+        jsConsole.writeLine(hasProperty(obj, "length"));
+    </script>
+</body>
+</html>

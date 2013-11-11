@@ -1,0 +1,27 @@
+<html>
+<head>
+	<title>Exchange If</title>
+	<link href="styles/js-console.css" rel="stylesheet" />
+    <!--Write an if statement that examines two integer variables
+        and exchanges their values if the first one is greater
+        than the second one.-->
+</head>
+<body>
+	<div id="js-console"></div>
+	<script src="scripts/js-console.js"></script>
+	<script>
+	    var numA = 3,
+            numB = 2,
+            numC;
+
+	    if (numA > numB) {
+	        numC = numA;
+	        numA = numB;
+	        numB = numC;
+	    }
+
+	    jsConsole.writeLine("a = " + numA);
+	    jsConsole.writeLine("b = " + numB);
+	</script>
+</body>
+</html>

@@ -1,0 +1,48 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+</head>
+<body>
+    <script>
+        //Write a function that counts how many times given number appears in given array. Write a test function to check if the function is working correctly.
+
+        var arr = [1, 2, 3, 4, 2, 3, 3];
+        var search = 2;
+
+        function getOccurrences(arr, searchNum) {
+            var count = 0;
+
+            for (var i = 0; i < arr.length; i++) {
+                if (searchNum === arr[i]) {
+                    count++;
+                }
+            }
+
+            return count;
+        }
+        
+        console.log(getOccurrences(arr, search));
+
+        (function testGetOccurences() {
+            var searchNumber = 2;
+            var arr1 = [1, 2, 3, 4, 5];
+            var arr2 = [1, 2, 2, 4, 5];
+            var arr3 = [1, 2, 2, 2, 5];
+            var arr4 = [1, 2, 2, 2, 2];
+
+            if (getOccurrences(arr1, searchNumber) != 1) {
+                console.error("Wrong");
+            }else if (getOccurrences(arr2, searchNumber) != 2) {
+                console.error("Wrong");
+            }else if (getOccurrences(arr3, searchNumber) != 3) {
+                console.error("Wrong");
+            }else if (getOccurrences(arr4, searchNumber) != 4) {
+                console.error("Wrong");
+            } else {
+                console.info("Correct");
+            }
+        })();
+    </script>
+</body>
+</html>

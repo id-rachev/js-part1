@@ -1,0 +1,70 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+</head>
+<body>
+    <script type="text/javascript">
+
+        //accepts 2 integers == coordinates
+        //returns Point object
+        function createPoint(x, y) {
+            return {
+                pointX: x,
+                pointY: y
+            }
+        }
+
+        var a = createPoint(1, 1);
+        var b = createPoint(2, 2);
+        var c = createPoint(3, 3);
+        var d = createPoint(4, 4);
+        var e = createPoint(5, 5);
+        var f = createPoint(6, 6);
+
+        //accepts 2 Points == start & end
+        //returns Line object
+        function createLine(a, b) {
+            return {
+                start: a,
+                end: b,
+                length: calculateDistance(a, b)
+            }
+        }
+
+        createLine.prototype.killMe = function () {
+            alert("kill me");
+        }
+
+        var line1 = createLine(a, b);
+        var line2 = createLine(c, d);
+        var line3 = createLine(e, f);
+
+        //accepts 2 Points
+        //return integer == the distance
+        function calculateDistance(a, b) {
+            var side1 = (a.pointX - b.pointX) * (a.pointX - b.pointX);
+            var side2 = (b.pointY - a.pointY) * (b.pointY - a.pointY);
+            return Math.sqrt(side1 + side2);
+        }
+
+        var dist = calculateDistance(a, b);
+
+        //accepts 3 lines
+        //returns boolean
+        function checkIfThreeLinesCanFormATriangle(x, y, z) {
+            var line1length = calculateDistance(x.start, x.end);
+            var line2length = calculateDistance(y.start, y.end);
+            var line3length = calculateDistance(z.start, z.end);
+
+            if (line1length < line2length + line3length &&
+				line2length < line1length + line3length &&
+				line3length < line1length + line2length) {
+                return true;
+            }
+
+            return false;
+        }
+	</script>
+</body>
+</html>
